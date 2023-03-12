@@ -9,6 +9,10 @@
     <meta name="keywords" content="Felipe Akel, HTML, CSS, JavaScript, JS">
     <meta name="author" content="Felipe Akel Carvalho Florentino">
 
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsivo.css">
+
     <!-- Fontes do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,15 +22,18 @@
 </head>
 
 <body>
+
+    <!-- Palavra: Aula 1 [2023], Aula 2 [Emprego], Aula 3 [Em] -->
+
     <main>
 
         <div class="carrossel">
-            <img src="imagens/tlou-1.jpg" alt="Ellie e Joel abraçados">
-            <img src="imagens/tlou-2.jpg" alt="Ellie e Joel de perfil">
-            <img src="imagens/tlou-3.jpg" alt="Joel olhando pela janela">
-            <img src="imagens/tlou-4.jpg" alt="Ellie e Tess conversando">
-            <img src="imagens/tlou-5.jpg" alt="Ellie e Joel caminhando na cidade destruída">
-            <img src="imagens/tlou-6.jpg" alt="Joel com a lanterna">
+            <img class="imagem ativa" src="imagens/tlou-1.jpg" alt="Ellie e Joel abraçados">
+            <img class="imagem" src="imagens/tlou-2.jpg" alt="Ellie e Joel de perfil">
+            <img class="imagem" src="imagens/tlou-3.jpg" alt="Joel olhando pela janela">
+            <img class="imagem" src="imagens/tlou-4.jpg" alt="Ellie e Tess conversando">
+            <img class="imagem" src="imagens/tlou-5.jpg" alt="Ellie e Joel caminhando na cidade destruída">
+            <img class="imagem" src="imagens/tlou-6.jpg" alt="Joel com a lanterna">
         </div>
 
         <!-- Estrutura - AZUL -->
@@ -34,9 +41,9 @@
 
             <!-- Estrutura - AMARELO -->
             <div class="informacoes">
-                <img src="./imagens/logo.png" alt="Logomarca The Lest of Us">
+                <img class="logo" src="./imagens/logo.png" alt="Logomarca The Lest of Us">
 
-                <p class="texto">The Last of Us é uma série distópica da HBO baseada na franquia de jogos de videogame
+                <p class="texto-descricao">The Last of Us é uma série distópica da HBO baseada na franquia de jogos de videogame
                     de mesmo nome
                     criada por Neil Druckmann. O drama narra um futuro pandêmico que foi devastador para humanidade,
                     deixando os seres humanos à beira da extinção.</p>
@@ -44,7 +51,7 @@
 
             <!-- Estrutura - ROXO -->
             <div class="botoes-carrossel">
-                <button class="botao"></button>
+                <button class="botao selecionado"></button>
                 <button class="botao"></button>
                 <button class="botao"></button>
                 <button class="botao"></button>

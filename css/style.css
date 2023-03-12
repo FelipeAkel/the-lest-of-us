@@ -1,0 +1,124 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    max-width: 1280px;          /* Largura Máxima */
+    margin: 0 auto;             /* Estou centralizando o conteúdo na tela - Horizontal */
+}
+
+main:after{                    /* Deixando o background mais escuro e com gradiente */
+    content: '';
+    min-height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.05926120448179273) 50%, rgba(0, 0, 0, 1) 90%);
+    z-index: -1;
+}
+
+.conteudo{
+    /* background-color: aqua; */
+    display: flex;              /* Estou centralizando o conteúdo na tela - Vertical */
+    flex-direction: column;     /* Estou centralizando o conteúdo na tela - Vertical */
+    min-height: 100vh;          /* Estou centralizando o conteúdo na tela - Vertical - vh é o tamanho da tela do monitor do usuário, celular ou monitor*/
+    justify-content: space-evenly;
+                                /* Estou centralizando o conteúdo na tela - Vertical 
+                                - center, 
+                                -space-evenly separa os elementos uniformemente */
+}
+
+.informacoes {
+    /* background-color: blueviolet; */
+}
+
+.informacoes .logo{
+    max-width: 350px;
+    filter: invert(1);          /* Invertendo a cor da logo de preto para branca */
+    margin-bottom: 80px;
+}
+
+.informacoes .texto-descricao {
+    width: 50%; 
+    font-size: 24px;
+    color: #fff;
+    line-height: 30px;          /* Espaçamento entre as linhas */
+}
+
+.botoes-carrossel {
+    /* background-color: red; */
+    display: flex;              /* Centralizando botões */
+    justify-content: center;    /* Centralizando botões */
+    gap: 20px;                  /* Espaçamento dos botões */
+}
+
+.botoes-carrossel .botao {
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;            /* Curso fica como um ponteiro quando passa em cima do botão, clicar */
+    border-color: #fff;
+}
+
+.botoes-carrossel .botao.selecionado{ /* Repare não coloquei espaço entre .botao.selecionado. Logo, estou definindo ao navegador que utilize o elemento que tenha essas duas classes */
+    background-color: cadetblue;
+}
+
+.menu-lateral {
+    /* background-color: blue; */
+    position: fixed;            
+    top: 0;
+    right: 0;
+    width: 80px;
+
+    display: flex;                  /* Alinhando verticalmente */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;              /* FIM - Alinhando verticalmente */
+}
+
+.menu-lateral ul{                   /* Espaçamento entre os icons */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-lateral .icones{
+    width: 30px;
+    filter: invert(1);
+    transition: 0.3s ease-in-out;   /* Criando uma animação que vai durar 0.3 segundos. Dessa forma o icone vai crescer de forma suave */
+}
+
+.menu-lateral .icones:hover{
+    transform: scale(1.2);      /* Quando passar o mause em cima, vai aumentar o icone em 1.2 o tamanho dele */
+}
+
+.carrossel{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;                /* Estou definindo que o carrossel vai ficar atrás de tudo.  */
+}
+
+.carrossel .imagem{
+    width: 100%;                /* Estou centralizando as imagens sem perde a proporções e nem distorcendo */
+    height: 100vh;
+    object-fit: cover;          /* Não distorce a imagem */
+    display: none;              /* Estou encondendo a imagem para trabalhar com o JS */
+    
+    animation: mudarImagem 0.7s;    /* Criando animação quando mudar de imagem */
+}
+
+.carrossel .imagem.ativa{
+    display: block;             /* Estou mostrando a imagem quando estiver com a class "" */
+}
+
+@keyframes mudarImagem{             /* Criando animação quando mudar de imagem */
+    from{
+        opacity: 0.85;
+    }to{
+        opacity: 1;
+    }
+}
